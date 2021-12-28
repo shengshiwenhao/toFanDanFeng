@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<title>to 范丹凤</title>
+<title>to 郝双慧</title>
 <meta charset="UTF-8">
 <style>
 body{
@@ -51,7 +51,7 @@ body{
     top:200px;
     line-height: 28px;
     text-align: center;
-    font-size: 24px;
+    font-size: 70px;
 }
 @keyframes move{
 0%{transform:scale(1.1);}
@@ -60,7 +60,7 @@ body{
 75%{transform:scale(1.2);}
 100%{transform:scale(1.1);}
 }
-.wwh,.fdf{
+.wwh,.hsh{
  color: red;
  margin: 0 auto;
  position: relative;
@@ -98,20 +98,17 @@ body{
     <h1 class="wwh">仵文豪</h1>
     <div class="myHeart">
         <p>
-            我想说的话<br>
-            很多时候都不知道怎么表达<br>
-            爱总是藏在心里<br>
-            你知不知道也藏在这句子里<br>
+            喜欢
         </p>
     </div>
     <div class="time"></div>
-    <h1 class="fdf">范丹凤</h1> 
+    <h1 class="hsh">郝双慧</h1> 
     <canvas id="fireworks">
     </canvas> 
     <p class="date">
         <span>仵文豪</span>
         <br/>
-        <span>2021年9月27日</span>
+        <span>2021年12月31日</span>
     </p>
 </body>  
 </html>
@@ -127,7 +124,7 @@ body{
         fireworks = document.getElementById("fireworks");
         myHeart = document.querySelector(".myHeart");
         wwh = document.querySelector(".wwh");
-        fdf = document.querySelector(".fdf");
+        hsh = document.querySelector(".hsh");
         time = document.querySelector(".time"); 
         date = document.querySelector(".date"); 
         fws = fireworks.getContext("2d"); 
@@ -205,30 +202,30 @@ body{
         }
         var num = 0;
         var jump = 0;
-        var timeUp = 350;
+        var timeUp = 273;
         var content = '';
-        var text1 = `致范范,当你看到这封情书时,此刻的我也是忐忑不安的,我不知道以这种表达方式,向你传达我的爱慕之情是否妥当,诚恳的希望你能看完,这些发自肺腑的言语`
-        var text2 = `,其实我们认识的时间很短,从9月18日我加你好友到9月27日,短短的十天时间,却让我曾经心如止水的心泛起涟漪,从我的毫不在意,到我的心渐渐被你融化,对于一见钟情,我本来是抱着一种不相信的态度,可是我偏偏在看到你那一刻动心了,你在网络那一端阳光且温柔的脸庞,深深的毫不客气的,占据了我的心里的那块,可能本来属于你的空间,这两天我多次翻看,我们之间的聊天记录,每次翻看,都像你在身边与我对话,我是一个平凡的人,没有俊朗的外表和横溢的才华,但是我有一颗喜欢你的心,范范,你愿意做我的女朋友吗,期盼给你幸福的人：仵文豪`
+        var text1 = `致双慧,当你看到这封电子信时,此刻的我也是忐忑不安的,我不知道以这种表达方式,向你传达我的爱慕之情是否妥当,诚恳的希望你能看完,这些发自肺腑的言语`
+        var text2 = `双慧,自从上周日与你见面回来,不知道为什么脑子里会经常浮现出你的身影,虽然我们认识的时间,只有短短的十几天,却让我曾经心如止水的心泛起涟漪,从我的毫不在意,到我的心渐渐被你融化,我是一个平凡的人,没有俊朗的外表和横溢的才华,但是我有一颗喜欢你的心,双慧,很幸运在今年的最后一段时间与你相识,期望明年及以后咱们可以一起携手并肩走过,期盼给你幸福的人：仵文豪`
         var split1 = text1.split('').reverse()
         var split2 = text2.split('').reverse()
         var timer = setInterval(()=>{
             timeUp--;
-            if(timeUp<341){
+            if(timeUp<264){
                 time.style.display = 'block'
                 if (timeUp>9) {
-                    if (timeUp>=269) {
-                        if(split1[timeUp-269] === ','){
-                            split1[timeUp-269] = '<br>'
+                    if (timeUp>=191) {
+                        if(split1[timeUp-191] === ','){
+                            split1[timeUp-191] = '<br>'
                         }
-                        content += split1[timeUp-269]
+                        content += split1[timeUp-191]
                     } 
-                    if(timeUp<269 && timeUp>265) {
+                    if(timeUp<191 && timeUp>187) {
                         content = content
                     }
-                    if(timeUp === 265) {
+                    if(timeUp === 187) {
                         content = ''
                     }
-                    if (timeUp<265){
+                    if (timeUp<187){
                         if(split2[timeUp-10] === ','){
                             split2[timeUp-10] = '<br>'
                         }
@@ -248,7 +245,7 @@ body{
                 time.style.display = 'none'
                 myHeart.style.display = 'block'
                 wwh.style.display = 'block'
-                fdf.style.display = 'block'
+                hsh.style.display = 'block'
                 date.style.display = 'block'
                 clearInterval(timer)
             }
